@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  hadoop:
+    build: .
+    ports:
+      - "50070:50070"  # HDFS Namenode 
+      - "8080:8080"  # Spark
+      - "8088:8088"  # YARN ResourceManager
+    stdin_open: true
+    tty: true
+
+    
